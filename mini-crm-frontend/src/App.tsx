@@ -1,44 +1,28 @@
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import CustomerForm from './components/CustomerForm';
+import OrderForm from './components/OrderForm';
+import CustomerList from './components/CustomerList';
+import OrderList from './components/OrderList';
 import CustomerDetail from './pages/CustomerDetail';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/customer/:id" element={<CustomerDetail />} />
-      </Routes>
+      <Navbar />
+      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white px-4 py-6 transition-colors duration-300">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-customer" element={<CustomerForm />} />
+          <Route path="/add-order" element={<OrderForm />} />
+          <Route path="/customers" element={<CustomerList />} />
+          <Route path="/orders" element={<OrderList />} />
+          <Route path="/customer/:id" element={<CustomerDetail />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
 
 export default App;
-
