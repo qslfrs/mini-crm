@@ -1,4 +1,26 @@
 {
-  "customers": [],
-  "orders": []
+  "customers": [
+    {
+      "id": 1753193481841,
+      "name": "Qais",
+      "email": "alfarisi@gmail.com",
+      "phone": "082631826627"
+    },
+    {
+      "id": 1753194299757,
+      "name": "feiza",
+      "email": "feiza@gmail.com",
+      "phone": "082818388209"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1753194830698,
+      "customer_id": 1753193481841,
+      "items": [
+        "Kopi"
+      ],
+      "total_price": 95000
+    }
+  ]
 }
